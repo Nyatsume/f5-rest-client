@@ -75,7 +75,7 @@ type ServerVirtualServers struct {
 	Kind                     string `json:"kind,omitempty"`
 	LimitMaxBps              int    `json:"limitMaxBps,omitempty"`
 	Destination              string `json:"destination,omitempty"`
-	LimitMaxConnections      string `json:"limitMaxConnections,omitempty"`
+	LimitMaxConnections      int    `json:"limitMaxConnections,omitempty"`
 	Enabled                  bool   `json:"enabled,omitempty"`
 	SelfLink                 string `json:"selfLink,omitempty"`
 	LimitMaxConnectionStatus string `json:"limitMaxConnectionStatus,omitempty"`
