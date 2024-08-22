@@ -1,11 +1,11 @@
-module github.com/e-XpertSolutions/f5-rest-client
+module github.com/Nyatsume/f5-rest-client
 
 go 1.16
 
 require (
 	github.com/BurntSushi/toml v0.4.1
 	github.com/ChimeraCoder/gojson v1.1.0
-	github.com/davecgh/go-spew v1.1.0
+	github.com/e-XpertSolutions/f5-rest-client v1.0.2
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c
 	github.com/mitchellh/mapstructure v1.4.1
 	github.com/pkg/sftp v1.13.2
