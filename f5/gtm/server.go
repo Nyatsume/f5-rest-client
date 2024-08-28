@@ -84,6 +84,7 @@ type ServerVirtualServers struct {
 	LimitMaxPps              int    `json:"limitMaxPps,omitempty"`
 	Generation               int    `json:"generation,omitempty"`
 	LimitMaxBpsStatus        string `json:"limitMaxBpsStatus,omitempty"`
+	Monitor                  string `json:"monitor,omitempty"`
 	TranslationAddress       string `json:"translationAddress,omitempty"`
 	Name                     string `json:"name,omitempty"`
 }
