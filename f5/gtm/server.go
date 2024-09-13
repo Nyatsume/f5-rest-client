@@ -127,6 +127,27 @@ func (r *ServerResource) GetVirtualServers(id string) (*ServerVirtualServersList
 	return &list, nil
 }
 
+func (r *ServerResource) CreateVirtualServer(server_id string, virtualserver_id string, item ServerVirtualServers) error {
+	if err := r.c.ModQuery("POST", BasePath+ServerEndpoint+"/"+server_id+ServerVirtualServersEndpoint+"/"+virtualserver_id, item); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (r *ServerResource) EditVirtualServer(server_id string, virtualserver_id string, item ServerVirtualServers) error {
+	if err := r.c.ModQuery("PUT", BasePath+ServerEndpoint+"/"+server_id+ServerVirtualServersEndpoint+"/"+virtualserver_id, item); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (r *ServerResource) DeleteVirtualServer(server_id string, virtualserver_id string) error {
+	if err := r.c.ModQuery("DELETE", BasePath+ServerEndpoint+"/"+server_id+ServerVirtualServersEndpoint+"/"+virtualserver_id, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 // Create a new Server configuration.
 func (r *ServerResource) Create(item Server) error {
 	if err := r.c.ModQuery("POST", BasePath+ServerEndpoint, item); err != nil {
