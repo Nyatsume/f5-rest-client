@@ -127,8 +127,8 @@ func (r *ServerResource) GetVirtualServers(id string) (*ServerVirtualServersList
 	return &list, nil
 }
 
-func (r *ServerResource) CreateVirtualServer(server_id string, virtualserver_id string, item ServerVirtualServers) error {
-	if err := r.c.ModQuery("POST", BasePath+ServerEndpoint+"/"+server_id+ServerVirtualServersEndpoint+"/"+virtualserver_id, item); err != nil {
+func (r *ServerResource) CreateVirtualServer(server_id string, item ServerVirtualServers) error {
+	if err := r.c.ModQuery("POST", BasePath+ServerEndpoint+"/"+server_id+ServerVirtualServersEndpoint, item); err != nil {
 		return err
 	}
 	return nil
